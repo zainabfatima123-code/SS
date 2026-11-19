@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flexbox and Grid</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 20px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        /* Flexbox */
+        .flex {
+            display: flex;
+            gap: 20px;
+        }
+
+        .card {
+            flex: 1;
+            background: lightblue;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .box {
+            background: lightgreen;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Student Cards (Flexbox)</h2>
+
+    <div class="flex">
+        <div class="card">Rahul</div>
+        <div class="card">Priya</div>
+        <div class="card">Kiran</div>
+    </div>
+
+    <h2>Student Dashboard (Grid)</h2>
+
+    <div class="grid">
+        <div class="box">Students</div>
+        <div class="box">Courses</div>
+        <div class="box">Faculty</div>
+        <div class="box">Attendance</div>
+        <div class="box">Results</div>
+        <div class="box">Library</div>
+    </div>
+
+</body>
+</html>

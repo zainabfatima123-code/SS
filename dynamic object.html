@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Student Management System</h2>
+
+ID: <input id="id"><br><br>
+Name: <input id="name"><br><br>
+
+<button onclick="create()">Create</button>
+<button onclick="update()">Update</button>
+<button onclick="del()">Delete</button>
+<button onclick="search()">Search</button>
+
+<p id="result"></p>
+
+<script>
+let student = {};
+
+function create(){
+    student.id = document.getElementById("id").value;
+    student.name = document.getElementById("name").value;
+    document.getElementById("result").innerHTML = "Student Created";
+}
+
+function update(){
+    student.name = document.getElementById("name").value;
+    document.getElementById("result").innerHTML = "Student Updated";
+}
+
+function del(){
+    student = {};
+    document.getElementById("result").innerHTML = "Student Deleted";
+}
+
+function search(){
+    if(student.id){
+        document.getElementById("result").innerHTML =
+        "ID: " + student.id + "<br>Name: " + student.name;
+    }
+    else{
+        document.getElementById("result").innerHTML = "Student Not Found";
+    }
+}
+</script>
+
+</body>
+</html>

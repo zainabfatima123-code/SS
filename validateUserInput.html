@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Student Management System</h2>
+
+<label>Student Name:</label>
+<input type="text" id="name">
+
+<button onclick="validate()">Submit</button>
+
+<p id="message"></p>
+
+<script>
+function validate(){
+    let name = document.getElementById("name").value;
+
+    if(name == ""){
+        document.getElementById("message").innerHTML =
+        "Please enter Student Name";
+    }
+    else{
+        document.getElementById("message").innerHTML =
+        "Student Registered Successfully";
+    }
+}
+</script>
+
+</body>
+</html>

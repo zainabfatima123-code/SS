@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Student Management System</h2>
+
+<button onclick="getStudent()">Get Student</button>
+
+<p id="result"></p>
+
+<script>
+async function getStudent(){
+    let response = await fetch(
+    "https://jsonplaceholder.typicode.com/users/1");
+
+    let student = await response.json();
+
+    document.getElementById("result").innerHTML =
+    "Name: " + student.name +
+    "<br>Email: " + student.email;
+}
+</script>
+
+</body>
+</html>

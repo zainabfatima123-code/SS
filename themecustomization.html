@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Theme Customization</title>
+
+    <style>
+        :root {
+            --bg: white;
+            --text: black;
+            --box: lightblue;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            text-align: center;
+            font-family: Arial;
+        }
+
+        .card {
+            background: var(--box);
+            padding: 20px;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Student Management System</h2>
+
+    <div class="card">
+        <h3>Student Details</h3>
+        <p>Name: Rahul</p>
+        <p>Department: CSE</p>
+    </div>
+
+    <button onclick="changeTheme()">Change Theme</button>
+
+    <script>
+        function changeTheme() {
+            document.documentElement.style.setProperty("--bg", "black");
+            document.documentElement.style.setProperty("--text", "white");
+            document.documentElement.style.setProperty("--box", "blue");
+        }
+    </script>
+
+</body>
+</html>

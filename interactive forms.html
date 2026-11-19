@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Student Management System</h2>
+
+Name: <input id="name"><br><br>
+Department: <input id="dept"><br><br>
+
+<button onclick="showDetails()">Submit</button>
+
+<p id="result"></p>
+
+<script>
+function showDetails(){
+    let name = document.getElementById("name").value;
+    let dept = document.getElementById("dept").value;
+
+    document.getElementById("result").innerHTML =
+    "Name: " + name + "<br>Department: " + dept;
+}
+</script>
+
+</body>
+</html>
